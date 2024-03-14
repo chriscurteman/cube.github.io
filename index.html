@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MTG Tournament Event</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+        }
+
+        .container {
+            text-align: center;
+            padding: 20px;
+        }
+
+        h1, h2, p {
+            margin: 10px 0;
+        }
+
+        header, section, footer {
+            margin-bottom: 20px;
+        }
+
+        input[type="text"], input[type="email"] {
+            margin: 10px 0;
+            padding: 8px;
+            background-color: #333;
+            border: none;
+            color: #fff;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #555;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Magic: The Gathering Tournament</h1>
+            <p>Date: YYYY-MM-DD | Location: Event Hall</p>
+        </header>
+        <main>
+            <section class="registration">
+                <h2>Register</h2>
+                <form id="registerForm">
+                    <input type="text" id="name" placeholder="Your Name">
+                    <input type="email" id="email" placeholder="Your Email">
+                    <button type="submit">Sign Up</button>
+                </form>
+            </section>
+            <section class="info">
+                <h2>Tournament Details</h2>
+                <p>Join us for an exciting day of Magic: The Gathering. This tournament is open to players of all skill levels. Bring your best deck and compete for the title of Champion and great prizes!</p>
+            </section>
+        </main>
+        <footer>
+            <p>Contact us at email@example.com for more information.</p>
+        </footer>
+    </div>
+    <script>
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the form from submitting the traditional way
+
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+
+            console.log('Registration Submitted:', name, email);
+            alert('Thank you for registering! We will send you an email confirmation shortly.');
+        });
+    </script>
+</body>
+</html>
